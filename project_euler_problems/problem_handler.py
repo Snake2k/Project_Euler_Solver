@@ -1,7 +1,10 @@
 #!/usr/bin/env python
+# -*- coding: UTF-8 -*-
+
 # Import problems that have been solved.
 from solved_problems.python_solutions.problem_1 import problem_1
 from solved_problems.python_solutions.problem_2 import problem_2
+from solved_problems.python_solutions.problem_3 import problem_3
 
 # A problem itself is pretty much its index number, name, description.
 # This object lets us tie that information to a solution function.
@@ -32,5 +35,12 @@ P2 = Problem(
         "Sum of even-valued Fibonacci numbers under 4M.",
         problem_2
 )
+P3 = Problem(
+        3,
+        "Largest Prime Factor",
+        "Find the largest prime factor of 600851475143.",
+        problem_3
+)
 all_problems.append(P1)
 all_problems.append(P2)
+all_problems.append(P3)

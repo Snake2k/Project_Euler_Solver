@@ -1,4 +1,6 @@
 #!/usr/bin/env python
+# -*- coding: UTF-8 -*-
+
 # This program lists all of the solved project euler problems and then
 # asks the user which one they would like to solve.
 # It also prints a short description of the problem before running.
