@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # Import problems that have been solved.
-from solved_problems.problem_1 import problem_1
-from solved_problems.problem_2 import problem_2
+from solved_problems.python_solutions.problem_1 import problem_1
+from solved_problems.python_solutions.problem_2 import problem_2
 
 # A problem itself is pretty much its index number, name, description.
 # This object lets us tie that information to a solution function.
