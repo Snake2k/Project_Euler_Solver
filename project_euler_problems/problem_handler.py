@@ -1,10 +1,16 @@
 #!/usr/bin/env python
 # -*- coding: UTF-8 -*-
 
-# Import problems that have been solved.
-from solved_problems.python_solutions.problem_1 import problem_1
-from solved_problems.python_solutions.problem_2 import problem_2
-from solved_problems.python_solutions.problem_3 import problem_3
+from importlib import import_module
+
+# Will retrieve the function to the solution of a problem by demand.
+# Better than a shit ton of imports...
+def get_solution(number):
+    problem_name = "problem_" + str(number)
+    name = ".solved_problems.python_solutions." + problem_name
+    imp = import_module(name, package="project_euler_problems")
+    solution_ptr = getattr(imp, problem_name)
+    return solution_ptr
 
 # A problem itself is pretty much its index number, name, description.
 # This object lets us tie that information to a solution function.
@@ -23,24 +29,38 @@ class Problem():
 
 # Create a list that contains the object for each solved problem.
 all_problems = []
+
+# Create the Problem object for each solved problem
+# Then add is to the list of all_problems (solved).
 P1 = Problem(
         1,
         "Multiples of 3 and 5",
         "Sum up all the multiples of 3 and 5 below 1000",
-        problem_1
+        get_solution(1)
 )
+all_problems.append(P1)
+
 P2 = Problem(
         2,
         "Even Fibonacci numbers",
         "Sum of even-valued Fibonacci numbers under 4M.",
-        problem_2
+        get_solution(2)
 )
+all_problems.append(P2)
+
 P3 = Problem(
         3,
         "Largest Prime Factor",
         "Find the largest prime factor of 600851475143.",
-        problem_3
+        get_solution(3)
 )
-all_problems.append(P1)
-all_problems.append(P2)
 all_problems.append(P3)
+
+P4 = Problem(
+        4,
+        "Largest Palindrome Product",
+        "Find the largest palindrome made from the " + \
+        "product of two 3-digit numbers.",
+        get_solution(4)
+)
+all_problems.append(P4)
