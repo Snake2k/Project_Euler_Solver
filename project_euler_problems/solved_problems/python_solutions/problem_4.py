@@ -11,5 +11,5 @@ def problem_4():
                 answer = product
     return answer
 
-if __name__=="__main__":
+if __name__ == "__main__":
     print("Problem 4 Answer: " + str(problem_4()))

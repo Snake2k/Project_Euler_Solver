@@ -56,5 +56,12 @@ P4 = Problem(
         "product of two 3-digit numbers.",
         get_solution(4)
 )
+P5 = Problem(
+        5,
+        "Smallest Multiple",
+        "Find the smallest positive number that is evenly divisible " + \
+        "by all of the numbers from 1 to 20?",
+        get_solution(5)
+)
 # Add all Problem instances into the list of all_problems (solved).
-all_problems.extend([P1, P2, P3, P4])
+all_problems.extend([P1, P2, P3, P4, P5])

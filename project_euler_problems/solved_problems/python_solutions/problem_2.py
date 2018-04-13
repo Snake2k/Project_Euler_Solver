@@ -14,6 +14,6 @@ def problem_2():
             answer += third
     return answer
 
-if __name__=="__main__":
+if __name__ == "__main__":
     print("Problem 2 Answer: " + str(problem_2()))
 

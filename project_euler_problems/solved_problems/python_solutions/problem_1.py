@@ -8,5 +8,5 @@ def problem_1():
             answer += x
     return answer
 
-if __name__=="__main__":
+if __name__ == "__main__":
     print("Problem 1 Answer: " + str(problem_1()))

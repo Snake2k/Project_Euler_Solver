@@ -14,5 +14,5 @@ def problem_3():
         x += 1
     return answer
 
-if __name__=="__main__":
+if __name__ == "__main__":
     print("Problem 3 Answer: " + str(problem_3()))
