@@ -60,7 +60,7 @@ if __name__ == "__main__":
             problem = problem_lookup(choice, all_problems)
             problem.show_info()
             problem.solve()
-            raw_input("Press enter to continue...")
+            input("Press enter to continue...")
         # Otherwise, re-run the loop till you get a correct input.
         else:
             print("===INVALID CHOICE===")

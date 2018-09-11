@@ -3,28 +3,41 @@
 
 from importlib import import_module
 
-# Will retrieve the function to the solution of a problem by demand.
-# Better than a shit ton of imports...
 def get_solution(number):
+    '''
+    Imports the project euler solutions in python and retrieves the
+    solution function on demand.
+    '''
     problem_name = "problem_" + str(number)
     name = ".solved_problems.python_solutions." + problem_name
     imp = import_module(name, package="project_euler_problems")
     solution_ptr = getattr(imp, problem_name)
     return solution_ptr
 
-# A problem itself is pretty much its index number, name, description.
-# This object lets us tie that information to a solution function.
 class Problem():
+    '''
+    A project euler problem is its index number, name, and description.
+    This class allows us to initialize a problem, show its info, and solve it.
+    '''
     def __init__(self, prob_number, prob_name, prob_desc, prob_solution):
+        '''
+        Required problem number, name, description, and solution function.
+        '''
         self.number = prob_number
         self.name = prob_name
         self.desc = prob_desc
         self.solution = prob_solution
     def show_info(self):
+        '''
+        Display available information on the problem.
+        '''
         print("Problem number: " + str(self.number))
         print("Problem name: " + str(self.name))
         print("Problem description: " + str(self.desc))
     def solve(self):
+        '''
+        Solve the project euler problem and print the answer.
+        '''
         print("Problem %s Answer: %s" % (self.number, self.solution()))
 
 # Create a list that contains the object for each solved problem.
