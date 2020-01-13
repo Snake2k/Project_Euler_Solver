@@ -32,12 +32,12 @@ X = 1
 Y = 1
 
 Sum = X + Y
-Fib = 3 # X = Fib 1, Y = Fib 2, Sum = Fib 3.....N till it ends
+Fib = 3  # X = Fib 1, Y = Fib 2, Sum = Fib 3.....N till it ends
 
 while len(str(Sum)) < 1000:
-	X = Y
-	Y = Sum
-	Sum = X + Y
-	Fib += 1
+    X = Y
+    Y = Sum
+    Sum = X + Y
+    Fib += 1
 
-print "First term to contain 1000 digits: Fib #" + str(Fib) # Answer: 4782
+print "First term to contain 1000 digits: Fib #" + str(Fib)  # Answer: 4782

@@ -28,33 +28,35 @@ the sum of two abundant numbers.
 
 from math import sqrt
 
+
 def d(n):
-	Sum = 1
-	root = sqrt(n)
-	for x in range(2, int(root) + 1):
-		if n % x == 0:
-			Sum += x + n/x
-	if root == int(root):
-		Sum -= root
-	return int(Sum)
+    Sum = 1
+    root = sqrt(n)
+    for x in range(2, int(root) + 1):
+        if n % x == 0:
+            Sum += x + n / x
+    if root == int(root):
+        Sum -= root
+    return int(Sum)
+
 
 limit = 28123
 
 Abundant = set()
 for x in range(1, limit):
-	Sum = d(x)
-	if Sum > x:
-		Abundant.add(x)
+    Sum = d(x)
+    if Sum > x:
+        Abundant.add(x)
 
 SumsAbundant = set()
 for x in Abundant:
-	for y in Abundant:
-		if (x + y) < limit:
-			SumsAbundant.add(int(x + y))
+    for y in Abundant:
+        if (x + y) < limit:
+            SumsAbundant.add(int(x + y))
 
 Sum = 0
 for x in range(1, limit):
-	if x not in SumsAbundant:
-		Sum += x
+    if x not in SumsAbundant:
+        Sum += x
 
-print "Sum:", Sum # Answer: 4179871
+print "Sum:", Sum  # Answer: 4179871

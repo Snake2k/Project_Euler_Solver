@@ -1,6 +1,7 @@
 #!/usr/bin/env python
 # -*- coding: UTF-8 -*-
 
+
 def problem_2():
     answer = 0
     first = 0
@@ -14,6 +15,6 @@ def problem_2():
             answer += third
     return answer
 
+
 if __name__ == "__main__":
     print("Problem 2 Answer: " + str(problem_2()))
-

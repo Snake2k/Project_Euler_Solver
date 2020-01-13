@@ -50,12 +50,12 @@ Numbers = """
 71636269561882670428252483600823257530420752963450
 """
 
-LON = [int(x) for x in Numbers if x != '\n']
+LON = [int(x) for x in Numbers if x != "\n"]
 
 greatestProduct = 0
-for x in range(len(LON)-4):
-	product = LON[x] * LON[x+1] * LON[x+2] * LON[x+3] * LON[x+4]
-	if product > greatestProduct:
-		greatestProduct = product
+for x in range(len(LON) - 4):
+    product = LON[x] * LON[x + 1] * LON[x + 2] * LON[x + 3] * LON[x + 4]
+    if product > greatestProduct:
+        greatestProduct = product
 
-print "Greatest Product:", greatestProduct #Answer: 40824
+print "Greatest Product:", greatestProduct  # Answer: 40824

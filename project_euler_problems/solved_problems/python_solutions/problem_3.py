@@ -1,6 +1,7 @@
 #!/usr/bin/env python
 # -*- coding: UTF-8 -*-
 
+
 def problem_3():
     number = 600851475143
     x = 2
@@ -13,6 +14,7 @@ def problem_3():
                 number = number / x
         x += 1
     return answer
+
 
 if __name__ == "__main__":
     print("Problem 3 Answer: " + str(problem_3()))

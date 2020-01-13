@@ -30,15 +30,15 @@ Longest = 0
 Number = 0
 Cycle = 0
 for x in range(1, 1000):
-	for y in range(1, x):
-		remainder = (10**y) % x
-		if remainder == 1:
-			Cycle = y		
-			break
-		else:
-			Cycle = 0
+    for y in range(1, x):
+        remainder = (10 ** y) % x
+        if remainder == 1:
+            Cycle = y
+            break
+        else:
+            Cycle = 0
 
-	if Cycle > Longest:
-		Longest = Cycle
-		Number = x
-print "Value of D having longest cycle:", Number # Answer: 983
+    if Cycle > Longest:
+        Longest = Cycle
+        Number = x
+print "Value of D having longest cycle:", Number  # Answer: 983

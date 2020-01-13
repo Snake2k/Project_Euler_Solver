@@ -1,8 +1,9 @@
 #!/usr/bin/env python
 # -*- coding: UTF-8 -*-
 
+
 def problem_5():
-    '''
+    """
     List shortened by hand because if any number is divisible 
     by 20 then it is evenly divisible by 2, 4, 5, 10. 
     Same goes for 18.
@@ -14,7 +15,7 @@ def problem_5():
     Starting and stepping with 2520 because it is divisible 
     by all in list.
     Any number divisible by 2520 is divisible by the rest.
-    '''
+    """
     number = 2520
     divisors = [11, 13, 14, 16, 17, 18, 19, 20]
     while True:
@@ -31,6 +32,7 @@ def problem_5():
         else:
             number += 2520
     return number
+
 
 if __name__ == "__main__":
     print("Problem 5 Answer: " + str(problem_5()))

@@ -214,6 +214,6 @@ LargeNumber = LargeNumber.split()
 
 sum = 0
 for string in LargeNumber:
-	sum += int(string)
+    sum += int(string)
 
-print "First 10 digits of sum:", str(sum)[:10] # Answer: 5537376230
+print "First 10 digits of sum:", str(sum)[:10]  # Answer: 5537376230

@@ -9,20 +9,23 @@ from sys import exit
 from time import sleep
 from project_euler_problems.problem_handler import all_problems
 
+
 def clear_screen():
-    '''
+    """
     This cleans any previous output on the terminal
-    '''
+    """
     os.system("cls" if os.name == "nt" else "clear")
 
+
 def problem_lookup(lookup_number, problem_list):
-    '''
+    """
     Takes a problem number and a list of problems and returns the problem.
-    '''
+    """
     for problem in problem_list:
         if problem.number == lookup_number:
             return problem
     return None
+
 
 if __name__ == "__main__":
     # Run till the user explicitly chooses to exit.

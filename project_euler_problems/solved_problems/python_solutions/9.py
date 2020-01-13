@@ -14,9 +14,12 @@ Find the product abc.
 """
 
 for A in xrange(1, 1001):
-	for B in xrange(A+1, 1001):
-		for C in xrange(B+1, 1001):
-			if A*A + B*B == C*C and A+B+C == 1000:
-				print "A: %d\nB: %d\nC: %d" % (A, B, C)
-				print "Sum: %d\nProduct: %d" % (A+B+C, A*B*C) #Answer: 31875000
-				break
+    for B in xrange(A + 1, 1001):
+        for C in xrange(B + 1, 1001):
+            if A * A + B * B == C * C and A + B + C == 1000:
+                print "A: %d\nB: %d\nC: %d" % (A, B, C)
+                print "Sum: %d\nProduct: %d" % (
+                    A + B + C,
+                    A * B * C,
+                )  # Answer: 31875000
+                break

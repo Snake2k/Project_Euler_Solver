@@ -63,44 +63,44 @@ AllProducts = []
 # Check highest product Left to Right
 hProductLR = 0
 for x in range(20):
-	for y in range(16):
-		Product = Grid[x][y] * Grid[x][y+1] * \
-				  Grid[x][y+2] * Grid[x][y+3]
-		if Product > hProductLR:
-			hProductLR = Product
+    for y in range(16):
+        Product = Grid[x][y] * Grid[x][y + 1] * Grid[x][y + 2] * Grid[x][y + 3]
+        if Product > hProductLR:
+            hProductLR = Product
 AllProducts.append(hProductLR)
 
 # Check highest product Up to Down
 hProductUD = 0
 for x in range(20):
-	for y in range(16):
-		Product = Grid[y][x] * Grid[y+1][x] * \
-				  Grid[y+2][x] * Grid[y+3][x]
-		if Product > hProductUD:
-			hProductUD = Product
+    for y in range(16):
+        Product = Grid[y][x] * Grid[y + 1][x] * Grid[y + 2][x] * Grid[y + 3][x]
+        if Product > hProductUD:
+            hProductUD = Product
 AllProducts.append(hProductUD)
 
 # Check highest product Diagonally (Forward)
 hProductDF = 0
 for x in range(16):
-	for y in range(16):
-		Product = Grid[y][x] * Grid[y+1][x+1] * \
-				  Grid[y+2][x+2] * Grid[y+3][x+3]
-		if Product > hProductDF:
-			hProductDF = Product
+    for y in range(16):
+        Product = (
+            Grid[y][x] * Grid[y + 1][x + 1] * Grid[y + 2][x + 2] * Grid[y + 3][x + 3]
+        )
+        if Product > hProductDF:
+            hProductDF = Product
 AllProducts.append(hProductDF)
 
 # Check highest product Diagonally (Reversed)
 hProductDR = 0
 for x in range(3, 20):
-	for y in range(16):
-		Product = Grid[x][y] * Grid[x-1][y+1] * \
-				  Grid[x-2][y+2] * Grid[x-3][y+3]
-		if Product > hProductDR:
-			hProductDR = Product
+    for y in range(16):
+        Product = (
+            Grid[x][y] * Grid[x - 1][y + 1] * Grid[x - 2][y + 2] * Grid[x - 3][y + 3]
+        )
+        if Product > hProductDR:
+            hProductDR = Product
 AllProducts.append(hProductDR)
 
 # Print the maximum product
 for x in AllProducts:
-	print x
-print "Max Product:", max(AllProducts) # Answer: 70600674
+    print x
+print "Max Product:", max(AllProducts)  # Answer: 70600674

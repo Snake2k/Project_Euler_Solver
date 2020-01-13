@@ -58,11 +58,11 @@ Pyramid = Pyramid.splitlines()
 Pyramid = [x.split() for x in Pyramid]
 Pyramid = [[int(x) for x in level] for level in Pyramid]
 
-for p in range(len(Pyramid)-1, -1, -1):
-	for x in range(0, len(Pyramid[p])-1):
-		if Pyramid[p][x] > Pyramid[p][x+1]:
-			Pyramid[p-1][x] += Pyramid[p][x]
-		else:
-			Pyramid[p-1][x] += Pyramid[p][x+1]
+for p in range(len(Pyramid) - 1, -1, -1):
+    for x in range(0, len(Pyramid[p]) - 1):
+        if Pyramid[p][x] > Pyramid[p][x + 1]:
+            Pyramid[p - 1][x] += Pyramid[p][x]
+        else:
+            Pyramid[p - 1][x] += Pyramid[p][x + 1]
 
-print "Maximum total:", Pyramid[0] # Answer: 1074
+print "Maximum total:", Pyramid[0]  # Answer: 1074

@@ -29,34 +29,37 @@ for consecutive values of n, starting with n = 0.
 """
 import time
 
+
 def formula(n, a, b):
-    value = n**2 + a * n + b
+    value = n ** 2 + a * n + b
     value = abs(value)
     return value
 
+
 def isPrime(n):
     if n == 2:
-	return True
+        return True
     elif n < 2:
-	return None
+        return None
     for x in range(2, n):
-	if n % x == 0:
+        if n % x == 0:
             return False
     return True
+
 
 mostPrimes = 0
 Product = 0
 starttime = time.clock()
 for a in range(-1000, 1000):
     for b in range(-1000, 1000):
-	primes = 0
-	n = 0
-	while isPrime(formula(n, a, b)):
+        primes = 0
+        n = 0
+        while isPrime(formula(n, a, b)):
             n += 1
-	    primes += 1
-	    if primes > mostPrimes:
-		mostPrimes = primes
-		Product = a*b
+            primes += 1
+            if primes > mostPrimes:
+                mostPrimes = primes
+                Product = a * b
 
-print "\nThe product of a and b having max primes:", Product # Answer: -59231
+print "\nThe product of a and b having max primes:", Product  # Answer: -59231
 print "Time to finish program: %s seconds\n" % (time.clock() - starttime)

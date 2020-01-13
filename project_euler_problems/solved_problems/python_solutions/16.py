@@ -9,9 +9,9 @@ Project Euler Problem #16:
 What is the sum of the digits of the number 2**1000?
 """
 
-toPower = 2**1000
+toPower = 2 ** 1000
 Sum = 0
 for digit in str(toPower):
-	Sum += int(digit)
+    Sum += int(digit)
 
-print "Sum:", Sum # Answer: 1366
+print "Sum:", Sum  # Answer: 1366

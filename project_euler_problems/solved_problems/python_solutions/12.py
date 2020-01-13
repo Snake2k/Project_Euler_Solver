@@ -24,15 +24,16 @@ What is the value of the 1st triangle number to have over 500 divisors?
 """
 
 import time
+
 start = time.time()
 limit = 1
 number = 0
 divs = []
 while True:
-    for y in range(1, limit+1):
+    for y in range(1, limit + 1):
         number += y
-    for x in range(1, int(number**.5)+1):
-        if number%x==0:
+    for x in range(1, int(number ** 0.5) + 1):
+        if number % x == 0:
             divs.append(x)
     if len(divs) * 2 > 500:
         break
@@ -41,5 +42,5 @@ while True:
         divs = []
         number = 0
 
-print "1st Triangle Number with 500 divs:", number # Answer: 76576500
+print "1st Triangle Number with 500 divs:", number  # Answer: 76576500
 print "Time taken: ", str(time.time() - start)

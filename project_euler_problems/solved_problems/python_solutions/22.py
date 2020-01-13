@@ -21,23 +21,23 @@ What is the total of all the name scores in the file?
 
 import string
 
-namesFile = open("./problem_22_names.txt", 'r')
+namesFile = open("./problem_22_names.txt", "r")
 lines = namesFile.read()
-lines = lines.split(',')
+lines = lines.split(",")
 lines = sorted(lines)
 
 Letters = string.lowercase
 
 Alphabets = {}
 for x in range(1, len(Letters) + 1):
-	Alphabets[Letters[x-1]] = x
+    Alphabets[Letters[x - 1]] = x
 
 Sum = 0
 for word in lines:
-	wordSum = 0
-	for letter in word.lower():
-		if letter != "\"":
-			wordSum += Alphabets[letter]
-	Sum += (wordSum * (lines.index(word) + 1))
+    wordSum = 0
+    for letter in word.lower():
+        if letter != '"':
+            wordSum += Alphabets[letter]
+    Sum += wordSum * (lines.index(word) + 1)
 
-print "Total of all name scores:", Sum # Answer: 871198282
+print "Total of all name scores:", Sum  # Answer: 871198282

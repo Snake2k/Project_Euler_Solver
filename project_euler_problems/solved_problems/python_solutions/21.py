@@ -18,17 +18,19 @@ The proper divisors of 284 are 1, 2, 4, 71 and 142; so d(284) = 220.
 Evaluate the sum of all the amicable numbers under 10000.
 """
 
+
 def d(n):
-	Sum = 0
-	for x in range(1, n):
-		if n % x == 0:
-			Sum += x
-	return Sum
+    Sum = 0
+    for x in range(1, n):
+        if n % x == 0:
+            Sum += x
+    return Sum
+
 
 Sum = 0
 for x in range(1, 10000):
-	sumDivs = d(x)
-	if d(sumDivs) == x and sumDivs > x:
-		Sum += sumDivs + x
+    sumDivs = d(x)
+    if d(sumDivs) == x and sumDivs > x:
+        Sum += sumDivs + x
 
-print "Sum of all amicable numbers is:", Sum # Answer: 31626
+print "Sum of all amicable numbers is:", Sum  # Answer: 31626

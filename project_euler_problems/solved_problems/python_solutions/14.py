@@ -22,20 +22,19 @@ Which starting number, under one million, produces the longest chain?
 NOTE: Once the chain starts the terms are allowed to go above one million.
 """
 
-longest = { 'Number' : 2,
-		    'ChainS' : 1 }
+longest = {"Number": 2, "ChainS": 1}
 for number in range(2, 1000000):
-	Seq = [number]
-	while number > 1:
-		if number % 2 == 0:
-			number = number/2
-		else:
-			number = (3 * number) + 1
-		Seq.append(number)
-	if longest['ChainS'] < len(Seq):
-		longest['ChainS'] = len(Seq)
-		longest['Number'] = Seq[0]
+    Seq = [number]
+    while number > 1:
+        if number % 2 == 0:
+            number = number / 2
+        else:
+            number = (3 * number) + 1
+        Seq.append(number)
+    if longest["ChainS"] < len(Seq):
+        longest["ChainS"] = len(Seq)
+        longest["Number"] = Seq[0]
 
-print "Number:", longest['Number'] # Answer: 837799
-print "Chain Size:", longest['ChainS'] # Chain size: 525
+print "Number:", longest["Number"]  # Answer: 837799
+print "Chain Size:", longest["ChainS"]  # Chain size: 525
 # This solution took alot of time

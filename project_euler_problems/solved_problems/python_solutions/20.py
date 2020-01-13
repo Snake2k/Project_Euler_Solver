@@ -15,7 +15,7 @@ Find the sum of the digits in the number 100!
 sums = 1
 
 for x in range(100, 0, -1):
-	sums *= x
+    sums *= x
 
 sums = [int(i) for i in str(sums)]
-print "Sum of digits in 10!:", sum(sums) # Answer: 648
+print "Sum of digits in 10!:", sum(sums)  # Answer: 648

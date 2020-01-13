@@ -23,18 +23,18 @@ count = 0
 limit = 1000000 - 1
 
 while count < limit:
-	X = N - 2
-	Y = N - 1
-	while not Numbers[X] < Numbers[X+1]:
-		X -= 1
-	while not Numbers[Y] > Numbers[X]:
-		Y -= 1
-	Numbers[X], Numbers[Y] = Numbers[Y], Numbers[X]
-	Numbers[X+1:] = reversed(Numbers[X+1:])
-	count += 1
+    X = N - 2
+    Y = N - 1
+    while not Numbers[X] < Numbers[X + 1]:
+        X -= 1
+    while not Numbers[Y] > Numbers[X]:
+        Y -= 1
+    Numbers[X], Numbers[Y] = Numbers[Y], Numbers[X]
+    Numbers[X + 1 :] = reversed(Numbers[X + 1 :])
+    count += 1
 
 Answer = ""
 for Num in Numbers:
-	Answer += Num
+    Answer += Num
 
-print "Millionth Lexicographic Permutation:", Answer # Answer: 2783915460
+print "Millionth Lexicographic Permutation:", Answer  # Answer: 2783915460

@@ -22,9 +22,9 @@ SumOfSquares = 0
 SquareOfSums = 0
 
 for x in range(1, 101):
-	SumOfSquares += x**2
-	SquareOfSums += x
+    SumOfSquares += x ** 2
+    SquareOfSums += x
 
-SquareOfSums = SquareOfSums**2
+SquareOfSums = SquareOfSums ** 2
 
-print "Difference:", SquareOfSums - SumOfSquares #Answer: 25164150
+print "Difference:", SquareOfSums - SumOfSquares  # Answer: 25164150
